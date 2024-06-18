@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(https://i.pinimg.com/736x/37/06/27/370627b5a9a356341edb326389d37aab.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+  
+.top .overlay {
+    position: absolute;
+    width:100%;
+    background-color: rgba(16, 15, 15, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+min-height: inherit;
+    flex-direction: column;
+}
+
+.text {
+    display: flex;
+    justify-content:space-between; /* Distributes content evenly with space */
+    align-items: center;  /* Aligns items vertically in the center */
+    width: 100%;
+    padding: 0 10vh;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    gap: 20px; /* Space between elements */
+  }
+  
+  .text h1 {
+    font-weight: 600;
+    font-size: 4vh;
+    margin: 0 20px; /* Added margin for separation */
+  }
+  
+  .text .image {
+    background-image: url(mooni.png);
+    background-size: cover;
+    background-position: center;
+    width: 320px;
+    height: 500px;
+    border-radius: 10px;
+    
+    /* Removed margin for cleaner spacing */
+  }
+  
+  .rtext {
+    display: flex;
+     /* Removed unnecessary properties for .rtext */
+  }
+  
+
+.rtext p {
+    font-size: 12px;
+    padding:20px;
+}
+
+.bottom {
+    display: flex;
+    width: 100%;
+    min-height: 40vh;
+    height: 40vh; /* Added to ensure consistent height */
+}
+
+.b1, .b2, .b3 {
+    position: relative;
+    overflow: hidden;
+}
+.b1, .b2, .b3 {
+    width: 33.33%; /* Set all sections to 33.33% width for equal size */
+    min-height: 40vh; /* Apply min-height to all sections for consistency */
+    /* Other styles for .b1, .b2, and .b3 */
+  }
+  
+.b1 {
+
+    background-image: url(https://i.pinimg.com/736x/be/16/8d/be168dbc40c3f56dfe406a9529c7ed16.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px 15px;
+}
+
+.b1 h1, .b1 p {
+    margin: 10px 0;
+}
+
+.b2 {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.b2 .up, .b2 .down {
+    width: 100%;
+    height: 50%; /* Ensured equal height for up and down sections */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px 15px;
+}
+
+.b2 .up {
+    background-image: url(https://i.pinimg.com/736x/a0/97/d0/a097d04e3947a25685f5234262109c22.jpg);
+}
+
+.b2 .down {
+    background-image: url(https://i.pinimg.com/564x/d4/bc/7d/d4bc7db6bcde0bd311209dc2a0b96cab.jpg);
+    position: relative;
+}
+
+.b2 .down .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.068);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b3 {
+    
+    background-image: url(https://i.pinimg.com/736x/12/9e/60/129e603c3f907bb23a9db837aaa70f7f.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4vw 3vh;
+}
+
+.b3 p {
+    margin: 5px 0;
+    color: white; /* Ensured text color is white for visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Increased text shadow for readability */
+    padding: 5px; /* Added padding for visibility */
+    font-size: 20px; /* Increased font size for better visibility */
+}
+
+@media (max-width: 700px) {
+    .rtext {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .b3 {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 5vh;
+    }
+
+    .text .image {
+        height: 100px;
+        width: 80px;
+        margin-top: 2px;
+    }
+
+    .rtext {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rtext p {
+        margin-top: 5px;
+    }
+
+    .icons {
+        margin-top: 5px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .b1, .b2, .b3 {
+        width: 100%;
+        min-height: 30vh;
+    }
+
+    .b2 .up, .b2 .down {
+        min-height: 30vh;
+    }
+
+    .b3 {
+        background-position: left;
+    }
+}
+/* Enlarge effect for every div */
+/* Enlarge effect for specific divs */
+.top:hover,
+.b1:hover,
+.b2:hover,
+.b3:hover {
+    transform: scale(1.02); /* Enlarge the div by 10% on hover */
+    transition: transform 0.3s step-end; /* Smooth transition effect */
+}
+
